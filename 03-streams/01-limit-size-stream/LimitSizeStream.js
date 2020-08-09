@@ -2,7 +2,7 @@ const stream = require('stream');
 const LimitExceededError = require('./LimitExceededError');
 
 class LimitSizeStream extends stream.Transform {
-  constructor(options = {limit: 8, encoding: 'utf-8'}) {
+  constructor(options) {
     super(options);
 
     this.limit = options.limit;
