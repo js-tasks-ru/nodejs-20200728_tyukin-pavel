@@ -28,6 +28,7 @@ async function readFiles(req, res, directory, pathname) {
   res.write('Такого файла нет', 'utf8');
 }
 
+
 server.on('request', (req, res) => {
   const pathname = url.parse(req.url).pathname.slice(1);
 
