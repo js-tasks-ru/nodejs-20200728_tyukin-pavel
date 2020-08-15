@@ -12,7 +12,6 @@ server.on('request', (req, res) => {
   switch (req.method) {
     case 'GET':
       fs.createReadStream(filepath).on('error', (err) => {
-        console.error(err);
         if (err.code === 'ENOENT') {
           if (pathname.indexOf('/') > 0) {
             res.writeHead(400);
