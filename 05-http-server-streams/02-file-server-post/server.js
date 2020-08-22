@@ -13,6 +13,7 @@ server.on('request', (req, res) => {
   if (pathname.indexOf('/') !== -1 || pathname.indexOf('..') !== -1) {
     res.statusCode = 400;
     res.end('Bad request');
+    return;
   }
 
   const filepath = path.join(__dirname, 'files', pathname);
